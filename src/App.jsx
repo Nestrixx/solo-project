@@ -1,11 +1,19 @@
-import React from "react";
-import NewNameForm from "./components/NewNameForm";
+import React, {useState} from "react";
 import UserInfo from "./components/UserInfo";
 
 function App() {
+    const [userInfo, setUserInfo] = useState('');
+const addUserInfoHandler = (userData) => {
+    setUserInfo(
+        (prevUserInfo) => {
+            return [userData, ...prevUserInfo];
+        },
+    );
+};
+    
   return (
     <div>
-        <NewNameForm></NewNameForm>
+        <UserInfo onAddUserInfo={addUserInfoHandler}></UserInfo>
     </div>
   );
 }

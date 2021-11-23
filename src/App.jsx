@@ -1,19 +1,19 @@
-import React, {useState} from "react";
-import UserInfo from "./components/UserInfo";
+import React, { useState } from "react";
+import NewNameForm from "./components/NewNameForm";
+import UserList from "./components/UserList";
 
 function App() {
-    const [userInfo, setUserInfo] = useState('');
-const addUserInfoHandler = (userData) => {
-    setUserInfo(
-        (prevUserInfo) => {
-            return [userData, ...prevUserInfo];
-        },
-    );
-};
-    
+  const [userInfoList, setUserInfoList] = useState([]);
+  const addUserInfoHandler = (userData) => {
+    setUserInfoList((prevUserInfo) => {
+      return [userData, ...prevUserInfo];
+    });
+  };
+
   return (
     <div>
-        <UserInfo onAddUserInfo={addUserInfoHandler}></UserInfo>
+      <NewNameForm onAddUserInfo={addUserInfoHandler}></NewNameForm>
+      <UserList items={userInfoList}></UserList>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NewNameForm from "./components/NewNameForm";
 import UserList from "./components/UserList";
+import "./App.css";
 
 function App() {
   const [userInfoList, setUserInfoList] = useState([]);
@@ -11,9 +12,9 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="App-Wrapper">
       <NewNameForm onAddUserInfo={addUserInfoHandler}></NewNameForm>
-      <UserList items={userInfoList}></UserList>
+      {userInfoList.length !== 0 && <UserList items={userInfoList}></UserList>}
     </div>
   );
 }

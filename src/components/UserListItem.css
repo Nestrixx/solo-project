@@ -1,0 +1,13 @@
+.listItem-wrapper {
+    display: flex;
+    border: 3px solid rgb(241, 235, 235);
+    padding-left: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.listItem-age {
+    padding-left: 5px;
+}

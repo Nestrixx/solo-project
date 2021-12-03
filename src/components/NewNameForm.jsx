@@ -28,21 +28,33 @@ const NewNameForm = (props) => {
 
   return (
     <form onSubmit={submitHandler}>
-      <div>
-        <label>Username</label>
-        <input type="text" value={username} onChange={usernameInputHandler} />
+      <div className="form-wrapper">
+        <div className="smaller-wrapper">
+          <div className="username-wrapper">
+            <label className="username">Username</label>
+            <input
+              className="username-input"
+              type="text"
+              value={username}
+              onChange={usernameInputHandler}
+            />
+          </div>
+          <div className="age-wrapper">
+            <label className="age">Age (Years)</label>
+            <input
+              className="age-input"
+              type="number"
+              min="2"
+              max="118"
+              value={age}
+              onChange={ageInputHandler}
+            />
+          </div>
+          <button class="button" type="submit">
+            Add User
+          </button>
+        </div>
       </div>
-      <div>
-        <label>Age (years)</label>
-        <input
-          type="number"
-          min="1"
-          max="118"
-          value={age}
-          onChange={ageInputHandler}
-        />
-      </div>
-      <button type="submit">Add User</button>
     </form>
   );
 };

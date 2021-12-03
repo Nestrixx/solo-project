@@ -1,0 +1,51 @@
+.form-wrapper {
+    background-color: white;
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 50rem;
+    max-width: 85%;
+    border-radius: 12px;
+    font-weight: 1000;
+    font-size: 1.2rem;
+}
+
+.username-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.age-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.username {
+    padding-bottom: 3px;
+}
+
+.age {
+    padding-bottom: 3px;
+}
+
+.username-input {
+    font-size: large;
+    border-color: rgb(241, 235, 235);
+}
+
+.age-input {
+    font-size: large;
+    border-color: rgb(241, 235, 235);
+}
+
+.button {
+    background-color: #40005d;
+    color: white;
+    margin-top: 7px;
+    margin-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.2rem;
+}
